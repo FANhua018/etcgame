@@ -1,5 +1,7 @@
 ## 集成文档
 
+#### 引用ETC工程
+
 #### 权限
 ``` xml
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
