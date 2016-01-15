@@ -184,6 +184,6 @@
 
 #### 集成代码
 在程序入口添加下列方法：
-``` Android
+``` java
     Guider.Instance().onCreate(Context context);
 ```
