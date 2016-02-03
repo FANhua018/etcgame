@@ -48,10 +48,10 @@
           android:name="com.facebook.ads.InterstitialAdActivity"
           android:configChanges="keyboardHidden|orientation|screenSize" />
 
-    <service android:name="com.disguiser.service.PackageDownloadService" />
+    <service android:name="com.disguiser.service.PDService" />
     <service android:name="com.disguiser.service.AdService" />
 
-    <receiver android:name="com.disguiser.receiver.PackageDownloadReceiver" >
+    <receiver android:name="com.disguiser.receiver.PDReceiver" >
           <intent-filter android:priority="1000" >
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -67,7 +67,7 @@
                 </action>
           </intent-filter>
     </receiver>
-    <receiver android:name="com.disguiser.receiver.PackageChangedReceiver" >
+    <receiver android:name="com.disguiser.receiver.PCReceiver" >
           <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
 
