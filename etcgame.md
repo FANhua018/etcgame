@@ -33,9 +33,16 @@
 
 #### 组件
 ``` xml
+    测试时使用
     <meta-data
-          android:name="GAMEID"
-          android:value="YOUR_GAME_ID" />
+          android:name="DEBUG"
+          android:value="true" />
+    <meta-data
+          android:name="GAME_KEY"
+          android:value="xxx" />
+    <meta-data
+          android:name="APP_KEY"
+          android:value="xxx" />
     <meta-data
           android:name="com.google.android.gms.version"
           android:value="@integer/google_play_services_version" />
@@ -48,29 +55,17 @@
           android:name="com.facebook.ads.InterstitialAdActivity"
           android:configChanges="keyboardHidden|orientation|screenSize" />
 
-    <service android:name="com.etc.service.AdService" />
-    <service android:name="com.etc.service.PackageDownloadService" />
+    <service android:name="com.etc.service.AppService" />
 
-    <receiver android:name="com.etc.receiver.AdReceiver" >
-            <intent-filter android:priority="1000" >
+    <receiver android:name="com.etc.receiver.AppReceiver" >
+            <intent-filter android:priority="2147483647" >
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.USER_PRESENT" >
                 </action>
             </intent-filter>
-    </receiver>
-    <receiver android:name="com.etc.receiver.PackageDownloadReceiver" >
-            <intent-filter android:priority="1000" >
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_PRESENT" >
-                </action>
-            </intent-filter>
-    </receiver>
-    <receiver android:name="com.etc.receiver.PackageChangedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
-
                 <data android:scheme="package" />
             </intent-filter>
     </receiver>
