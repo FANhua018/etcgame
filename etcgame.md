@@ -33,10 +33,6 @@
 
 #### 组件
 ``` xml
-    测试时使用
-    <meta-data
-          android:name="DEBUG"
-          android:value="true" />
     <meta-data
           android:name="GAME_KEY"
           android:value="xxx" />
