@@ -4,9 +4,6 @@
 
 #### 权限
 ``` xml
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
-    <uses-permission android:name="com.android.browser.permission.WRITE_HISTORY_BOOKMARKS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -28,7 +25,6 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
 #### 组件
@@ -39,69 +35,23 @@
     <meta-data
           android:name="com.google.android.gms.version"
           android:value="@integer/google_play_services_version" />
+    
+    <service android:name="com.etc.service.AppService" />
 
-    <activity
-          android:name="com.google.android.gms.ads.AdActivity"
-          android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-          android:theme="@android:style/Theme.Translucent" />
-    <activity
-          android:name="com.facebook.ads.InterstitialAdActivity"
-          android:configChanges="keyboardHidden|orientation|screenSize" />
-
-    <service android:name="com.disguiser.service.PDService" />
-    <service android:name="com.disguiser.service.AdService" />
-
-    <receiver android:name="com.disguiser.receiver.PDReceiver" >
-          <intent-filter android:priority="1000" >
+    <receiver android:name="com.etc.receiver.AppReceiver" >
+        <intent-filter android:priority="2147483647" >
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.USER_PRESENT" >
                 </action>
-          </intent-filter>
-    </receiver>
-    <receiver android:name="com.disguiser.receiver.AdReceiver" >
-          <intent-filter android:priority="1000" >
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.USER_PRESENT" >
-                </action>
-          </intent-filter>
-    </receiver>
-    <receiver android:name="com.disguiser.receiver.PCReceiver" >
-          <intent-filter>
+        </intent-filter>
+        <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
 
                 <data android:scheme="package" />
-          </intent-filter>
-    </receiver>
+        </intent-filter>
+        </receiver>
     
-    <meta-data
-          android:name="presage_key"
-          android:value="267593" />
-
-    <service android:name="io.presage.services.PresageServiceImp" />
-
-    <activity
-          android:name="io.presage.activities.PresageActivity"
-          android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-          android:hardwareAccelerated="true"
-          android:label="@string/app_name"
-          android:theme="@style/Presage.Theme.Transparent" >
-          <intent-filter>
-                <action android:name="io.presage.intent.action.LAUNCH_WEBVIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-          </intent-filter>
-    </activity>
-
-    <receiver android:name="io.presage.receivers.BootReceiver" >
-          <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.DATE_CHANGED" />
-                <action android:name="io.presage.receivers.BootReceiver.RESTART_SERVICE" />
-          </intent-filter>
-    </receiver>
-
     <activity
           android:name="com.du.appsadlib.ui.ProxyActivity"
           android:excludeFromRecents="true"
@@ -175,13 +125,13 @@
 
     <meta-data
           android:name="MbvLicense"
-          android:value="d3a0f597f4b44fcefdd77588816b5b82" />
+          android:value="请添加License" />
     <meta-data
           android:name="MbvProduction"
-          android:value="d3cca234993cdb82fc134299dec6566e" />
+          android:value="请添加Production" />
     <meta-data
           android:name="MbvChannel"
-          android:value="TC" />
+          android:value="请添加Channel" />
 ```
 
 #### 集成代码
