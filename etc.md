@@ -31,7 +31,7 @@
 ``` xml
     <meta-data
           android:name="APP_KEY"
-          android:value="8T7S2BSK6RS3M2YXT4VT" />
+          android:value="请添加APP_KEY" />
     <meta-data
           android:name="com.google.android.gms.version"
           android:value="@integer/google_play_services_version" />
