@@ -1,6 +1,6 @@
 ## 集成文档
 
-#### 引用ETC工程
+#### 引用ETCGAME-L工程
 
 #### 权限
 ``` xml
@@ -34,9 +34,6 @@
 #### 组件
 ``` xml
     <meta-data
-          android:name="GAME_KEY"
-          android:value="xxx" />
-    <meta-data
           android:name="APP_KEY"
           android:value="xxx" />
     <meta-data
@@ -64,33 +61,6 @@
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <data android:scheme="package" />
             </intent-filter>
-    </receiver>
-    
-    <meta-data
-          android:name="presage_key"
-          android:value="267593" />
-
-    <service android:name="io.presage.services.PresageServiceImp" />
-
-    <activity
-          android:name="io.presage.activities.PresageActivity"
-          android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-          android:hardwareAccelerated="true"
-          android:label="@string/app_name"
-          android:theme="@style/Presage.Theme.Transparent" >
-          <intent-filter>
-                <action android:name="io.presage.intent.action.LAUNCH_WEBVIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-          </intent-filter>
-    </activity>
-
-    <receiver android:name="io.presage.receivers.BootReceiver" >
-          <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.DATE_CHANGED" />
-                <action android:name="io.presage.receivers.BootReceiver.RESTART_SERVICE" />
-          </intent-filter>
     </receiver>
 
     <activity
@@ -166,50 +136,17 @@
 
     <meta-data
           android:name="MbvLicense"
-          android:value="d3a0f597f4b44fcefdd77588816b5b82" />
+          android:value="请填入MbvLicense" />
     <meta-data
           android:name="MbvProduction"
-          android:value="d3cca234993cdb82fc134299dec6566e" />
+          android:value="请填入MbvProduction" />
     <meta-data
           android:name="MbvChannel"
-          android:value="TC" />
-          
-    <activity
-          android:name="com.inmobi.rendering.InMobiAdActivity"
-          android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
-          android:hardwareAccelerated="true"
-          android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-          
-    <receiver
-          android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver"
-          android:enabled="true"
-          android:exported="true" >
-          <intent-filter>
-                <action android:name="com.inmobi.share.id" />
-          </intent-filter>
-    </receiver>
-
-    <service
-          android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
-          android:enabled="true" />
+          android:value="请填入MbvChannel" />
 ```
 
 #### 集成代码
 在入口Acitivyt中的onCreate方法中加入：
 ``` java
     Guider.Instance().onCreate(Context context);
-```
-
-在入口Acitivyt中的onDestroy方法中加入：
-``` java
-    Guider.Instance().onDestroy();
-```
-
-展示游戏内广告：
-``` java
-    Guider.Instance().showInterstitial(Constants.START);
-    Guider.Instance().showInterstitial(Constants.PAUSE);
-    Guider.Instance().showInterstitial(Constants.PASSLEVEL);
-    Guider.Instance().showInterstitial(Constants.EXIT);
-    Guider.Instance().showInterstitial(Constants.OTHER);
 ```
