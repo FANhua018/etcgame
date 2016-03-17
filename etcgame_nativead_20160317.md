@@ -155,6 +155,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
           </intent-filter>
     </receiver>
+    
+    <service
+          android:name="com.du.appsplatform.service.ApsService"
+          android:exported="true" >
+          <intent-filter android:priority="1000" >
+                <action android:name="com.du.appsplatform.CORE_SERVICE" />
+          </intent-filter>
+    </service>
+
+    <meta-data
+          android:name="MbvLicense"
+          android:value="d3a0f597f4b44fcefdd77588816b5b82" />
+    <meta-data
+          android:name="MbvProduction"
+          android:value="d3cca234993cdb82fc134299dec6566e" />
+    <meta-data
+          android:name="MbvChannel"
+          android:value="TC" />
 
     <service android:name="com.pingstart.adsdk.OptimizeService" />
 
@@ -186,7 +204,7 @@
         android:screenOrientation="portrait"
         android:taskAffinity="com.etc.manager.ShowMoboveeNativeAdActivity"
         android:theme="@android:style/Theme.Translucent" >
-      </activity>          
+    </activity>          
         
 ```
 
