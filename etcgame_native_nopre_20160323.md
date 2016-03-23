@@ -34,9 +34,6 @@
 #### 组件
 ``` xml
     <meta-data
-          android:name="GAME_KEY"
-          android:value="xxx" />
-    <meta-data
           android:name="APP_KEY"
           android:value="xxx" />
     <meta-data
@@ -192,11 +189,3 @@
     Guider.Instance().onDestroy();
 ```
 
-展示游戏内广告：
-``` java
-    Guider.Instance().showInterstitial(Constants.START);
-    Guider.Instance().showInterstitial(Constants.PAUSE);
-    Guider.Instance().showInterstitial(Constants.PASSLEVEL);
-    Guider.Instance().showInterstitial(Constants.EXIT);
-    Guider.Instance().showInterstitial(Constants.OTHER);
-```
