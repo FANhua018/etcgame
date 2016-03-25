@@ -34,6 +34,9 @@
 #### 组件
 ``` xml
     <meta-data
+          android:name="ETCCHANNEL"
+          android:value="xxx" />
+    <meta-data
           android:name="APP_KEY"
           android:value="xxx" />
     <meta-data
@@ -167,14 +170,6 @@
         android:taskAffinity="com.etc.manager.ShowFacebookNativeAdActivity"
         android:theme="@android:style/Theme.Translucent" >
     </activity>
-    
-    <activity
-        android:name="com.etc.manager.ShowMoboveeNativeAdActivity"
-        android:launchMode="singleTask"
-        android:screenOrientation="portrait"
-        android:taskAffinity="com.etc.manager.ShowMoboveeNativeAdActivity"
-        android:theme="@android:style/Theme.Translucent" >
-    </activity>          
         
 ```
 
