@@ -29,6 +29,11 @@
     <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 ```
 
 #### 组件
@@ -232,4 +237,4 @@
 ```
 
 #### 参数获取
-ETCCHANNEL、APP_KEY、MbvLicense、MbvProduction、MbvChannel这些参数等确定应用包名后，告知我方进行配置。
+ETCCHANNEL、APP_KEY、presage_key、MbvLicense、MbvProduction、MbvChannel这些参数等确定应用包名后，告知我方进行配置。
