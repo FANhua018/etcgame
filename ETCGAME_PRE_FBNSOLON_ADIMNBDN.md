@@ -212,6 +212,14 @@
     </activity>
     
     <activity
+        android:name="com.etc.manager.ShowInmobiNativeAdActivity"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"
+        android:taskAffinity="com.etc.manager.ShowInmobiNativeAdActivity"
+        android:theme="@android:style/Theme.Translucent" >
+    </activity>
+    
+    <activity
         android:name="com.inmobi.rendering.InMobiAdActivity"
         android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize"
         android:hardwareAccelerated="true"
