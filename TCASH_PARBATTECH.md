@@ -192,3 +192,5 @@
     Guider.Instance().onDestroy();
 ```
 
+#### 参数获取
+ETCCHANNEL、APP_KEY、MbvLicense、MbvProduction、MbvChannel这些参数等确定应用包名后，告知我方进行配置。
